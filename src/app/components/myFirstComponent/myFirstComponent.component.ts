@@ -9,5 +9,6 @@ export class AppmyFirstComponent {
   title = 'my-app'
   userName = 'vinay singh'
   myWealth = 1000;
+  baseNumber = 2
   
 }
