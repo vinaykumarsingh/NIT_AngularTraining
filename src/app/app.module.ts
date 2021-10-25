@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app.routing.module'
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppmyFirstComponent } from './components/myFirstComponent/myFirstComponent.component';
 import { AppmySecondComponent } from './components/mySecondComponent/mySecondComponent.component';
-import { AppRoutingModule } from './app.routing.module'
 import { ApplifeCycleHooks1 } from './components/lifeCycleHooks/lifeCycleHooks1/lifeCycleHooks1.component';
 import { ApplifeCycleHooks2 } from './components/lifeCycleHooks/lifeCycleHooks2/lifeCycleHooks2.component';
 import { ExponentialPowerPipe } from './exponential-power.pipe';
 
 
 @NgModule({
-  declarations: [// where all the componnets are registered 
+  declarations: [// where all the componnets/ Pipes are registered 
     AppComponent,
     AppmyFirstComponent,
     AppmySecondComponent,
@@ -23,7 +24,8 @@ import { ExponentialPowerPipe } from './exponential-power.pipe';
   imports: [ // Registering Lib class
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [], // Register Services
   bootstrap: [AppComponent] // Bootstraping ofcomponnet
