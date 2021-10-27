@@ -2,8 +2,8 @@
 <!-- Interpolation -->
 <!-- one Way Binding -->
 <p>My name is : {{userName | uppercase}}</p>
-<p>My Wealth is : {{ myWealth | currency }}</p>
-<p>Super power boost: {{baseNumber | exponentialPower: 3}}</p>
+<p *ngIf="isStatusValid2">My Wealth is : {{ myWealth | currency }}</p>
+<p *ngIf="!isStatusValid1">Super power boost: {{baseNumber | exponentialPower: 3}}</p>
 <input type="text">
 <!-- <button (click)="testClick($event)">Click Me to trigger event</button> -->
 <form [formGroup]="studentRegistrationForm">
@@ -17,6 +17,16 @@
 
 
 </form>
+
+<div class="userInfo">
+<ul>
+    <li *ngFor="let user of responsefromServer">
+        <span>{{user.userId}}</span><br>
+        <span>{{user.title}}</span><br>
+
+    </li>
+</ul>
+</div>
 
 
 <!-- for input  =>[] -->

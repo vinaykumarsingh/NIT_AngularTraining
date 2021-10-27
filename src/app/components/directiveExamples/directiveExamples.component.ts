@@ -1,18 +1,13 @@
-import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-myFirstComponent',
-  templateUrl: './myFirstComponent.component.html',
-  styleUrls: ['./myFirstComponent.component.css']
+  selector: 'app-directiveExamples',
+  templateUrl: './directiveExamples.component.html',
+  styleUrls: ['./directiveExamples.component.css']
 })
-export class AppmyFirstComponent {
-  title = 'my-app'
-  userName = 'vinay singh'
-  myWealth = 1000;
-  baseNumber = 2
-  isStatusValid1: boolean = true
-  isStatusValid2: boolean = false
+export class AppdirectiveExamples implements OnInit {
+  isShow: boolean = true;
+  isUserLoggedin: boolean = true;
   responsefromServer = [
     {
       "userId": 1,
@@ -44,23 +39,18 @@ export class AppmyFirstComponent {
       "title": "nesciunt quas odio",
       "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
     }
-  ]  
+  ]
 
-
-  constructor(private formBuilder: FormBuilder) {
-
+  constructor() {
+    console.log("I'm loaded in constructor");
   }
 
-  // profileForm = this.fb.group({
-
-  studentRegistrationForm = this.formBuilder.group({
-    firstName: ['Vinay', Validators.minLength(3)],
-    lastName: ['Singh']
-  })
-
-  onSubmit() {
-    debugger
-    console.log("value in th efoms are --====>", this.studentRegistrationForm.value)
+  ngOnInit() {
+    console.log("I'm loaded in ngOnInit");
+  }
+  toggleValue() {
+    this.isUserLoggedin = this.isUserLoggedin ? false : true;
+    this.isShow = this.isShow ? false : true;
 
   }
 

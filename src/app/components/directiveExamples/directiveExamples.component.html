@@ -1,0 +1,59 @@
+<p>Attribute Directive Exaples===></p>
+<button (click)="toggleValue()">Click me to toggle Directive Value</button>
+
+
+<div class="workingItem">
+    <p>ngStyle Exapmle</p>
+    <div [style]="{'font-size':isShow === true ? '10px' : '20px' }">isShow value is {{isShow}}</div>
+</div>
+
+
+
+
+
+
+<p>----------------</p>
+
+<p>NgClass Examples</p>
+<div [class]="isShow ? 'special' : 'notSpecial'">
+    This div is special
+</div>
+
+<p>Structural Directive Exaples===></p>
+
+<p>*ngIf examples---></p>
+
+<ng-template [ngIf]="isShow" [ngIfElse]="loggedOut">
+    <div>
+        Welcome back, friend.
+    </div>
+</ng-template>
+
+<ng-template #loggedOut>
+    <div>
+        Hi friend, login.
+    </div>
+</ng-template>
+
+
+<p>--------</p>
+<div *ngIf="isShow; else elseBlockShow">
+    Text to show for If
+</div>
+<ng-template #elseBlockShow>Text to show for else block</ng-template>
+<br>
+<p>--------</p>
+<div *ngIf="isUserLoggedin">
+    <p>Hi User, You have looged in </p>
+</div>
+
+<p>ngFor examples---></p>
+<div class="userInfo">
+    <ul>
+        <li *ngFor="let user of responsefromServer">
+            <span>{{user.userId}}</span><br>
+            <span>{{user.title}}</span><br>
+
+        </li>
+    </ul>
+</div>

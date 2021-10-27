@@ -10,6 +10,7 @@ import { AppmySecondComponent } from './components/mySecondComponent/mySecondCom
 import { ApplifeCycleHooks1 } from './components/lifeCycleHooks/lifeCycleHooks1/lifeCycleHooks1.component';
 import { ApplifeCycleHooks2 } from './components/lifeCycleHooks/lifeCycleHooks2/lifeCycleHooks2.component';
 import { ExponentialPowerPipe } from './exponential-power.pipe';
+import { AppdirectiveExamples } from './components/directiveExamples/directiveExamples.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ExponentialPowerPipe } from './exponential-power.pipe';
     AppmySecondComponent,
     ApplifeCycleHooks1,
     ApplifeCycleHooks2,
-    ExponentialPowerPipe
+    ExponentialPowerPipe,
+    AppdirectiveExamples
   ],
   imports: [ // Registering Lib class
     BrowserModule,
