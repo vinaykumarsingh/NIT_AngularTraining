@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-directiveExamples',
-  templateUrl: './directiveExamples.component.html',
-  styleUrls: ['./directiveExamples.component.css']
+  selector: 'app-formExamples',
+  templateUrl: './formExamples.component.html',
+  styleUrls: ['./formExamples.component.css']
 })
-export class AppdirectiveExamples implements OnInit {
+export class AppformExamples implements OnInit {
   userName:string = "";
   isShow: boolean = true;
   isUserLoggedin: boolean = true;

@@ -3,16 +3,27 @@
 
 
 <div class="workingItem">
-    <p>ngStyle Exapmle</p>
-    <div [style]="{'font-size':isShow === true ? '10px' : '20px' }">isShow value is {{isShow}}</div>
+    <p>ngModel Exapmle</p>
+    <span>My name is: {{userName}}</span><br>
+
+    <!-- <input [(ngModel)]="currentItem" (ngModelChange)="setUppercaseName($event)" #ctrl="ngModel" required> -->
+
+    <input [(ngModel)]="userName" (ngModelChange)="setUppercaseName($event)" #ctrl="ngModel" required>
 </div>
 
-
-
+<!-- var temp = this.isUserLoggedIn ? "User is logged In" : "try log in" -->
 
 
 
 <p>----------------</p>
+
+<p>ngStyle Exapmle</p>
+<div [style]="{'font-size':isShow === true ? '10px' : '20px' }">isShow value is {{isShow}}</div>
+<p>----------------</p>
+<p>NgClass Examples</p>
+<div [ngClass] = "isShow ? 'special' : 'notSpecial'">
+    This div is {{isShow}}
+</div>
 
 <p>NgClass Examples</p>
 <div [class]="isShow ? 'special' : 'notSpecial'">
