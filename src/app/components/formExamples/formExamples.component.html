@@ -1,1 +1,71 @@
-<p>Form Works!!!===></p>
+<!-- <p>Form Works</p>
+<div class="formContainer">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="formControlContainer">
+            <div class="formControl">
+                <label>First Name</label>
+                <input type="text" formControlName="firstName"
+                    [ngClass]="{ 'invalidControl': submitted && registerForm.controls.firstName.errors }" />
+            </div>
+            <div *ngIf="submitted && registerForm.controls.firstName.errors" class="invalidMessageContainer">
+                <div *ngIf="registerForm.controls.firstName.errors.required">First Name is required</div>
+            </div>
+        </div>
+    </form>
+</div> -->
+
+<p>Form Works</p>
+<div class="formContainer">
+    <form [formGroup]='registerForm' (ngSubmit)="onSubmit()">
+        <div class="formControlContainer">
+            <div class="formControl">
+                <label>First Name</label>
+                <input type="text" formControlName="firstName"
+                    [ngClass]="{ invalidControl: submitted && registerForm.controls.firstName.errors.required }" />
+
+            </div>
+            <div *ngIf="submitted && registerForm.controls.firstName.errors" class="invalidMessageContainer">
+                <div *ngIf="submitted && registerForm.controls.firstName.errors.required">First Name is required</div>
+            </div>
+        </div>
+        <div class="formControlContainer">
+            <div class="formControl">
+
+                <label>Last Name</label>
+                <input type="text" formControlName="lastName" />
+            </div>
+            <div *ngIf="submitted && registerForm.controls.lastName.errors" class="invalidMessageContainer">
+                <div *ngIf="registerForm.controls.lastName.errors.required">Last Name is required</div>
+            </div>
+        </div>
+
+        <div class="formControlContainer">
+            <div class="formControl">
+                <label>Email</label>
+                <input type="text" formControlName="email" />
+            </div>
+            <div *ngIf="submitted && registerForm.controls.email.errors" class="invalidMessageContainer">
+                <div *ngIf="registerForm.controls.email.errors.required">Email is required</div>
+                <div *ngIf="registerForm.controls.email.errors.email">Email must be a valid email address</div>
+            </div>
+        </div>
+
+        <div class="formControlContainer">
+            <div class="formControl">
+
+                <label>Password</label>
+                <input type="password" formControlName="password" />
+            </div>
+            <div *ngIf="submitted && registerForm.controls.password.errors" class="invalidMessageContainer">
+                <div *ngIf="registerForm.controls.password.errors.required">Password is required</div>
+                <div *ngIf="registerForm.controls.password.errors.minlength">Password must be at least 6 characters
+                </div>
+            </div>
+        </div>
+
+        <div class="buttonContainer">
+            <button class="btn btn-primary mr-1">Register</button>
+        </div>
+
+    </form>
+</div>

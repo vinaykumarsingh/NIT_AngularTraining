@@ -20,3 +20,11 @@ li {
 .testClass {
     background: violet;
 }
+.invalidControl {
+    border-color: red;
+}
+
+.invalidMessageContainer {
+    padding-left: 10px;
+    color: red;
+}

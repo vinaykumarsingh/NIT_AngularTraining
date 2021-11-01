@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formExamples',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formExamples.component.css']
 })
 export class AppformExamples implements OnInit {
-  userName:string = "";
+  registerForm: FormGroup;
+  submitted:boolean = false;
+
+
+  userName: string = "";
   isShow: boolean = true;
   isUserLoggedin: boolean = true;
   responsefromServer = [
@@ -42,12 +47,23 @@ export class AppformExamples implements OnInit {
     }
   ]
 
-  constructor() {
+  constructor(private formBuilder: FormBuilder) {
     console.log("I'm loaded in constructor");
   }
 
   ngOnInit() {
-    console.log("I'm loaded in ngOnInit");
+
+    this.registerForm = this.formBuilder.group(
+      {
+        firstName: ['', Validators.required],
+        lastName: ['',Validators.required],
+        email:['', [Validators.required, Validators.email]],
+        password: ['', [Validators.required, Validators.minLength(6)]],
+
+      }
+    )
+
+
   }
   toggleValue() {
     this.isUserLoggedin = this.isUserLoggedin ? false : true;
@@ -55,9 +71,13 @@ export class AppformExamples implements OnInit {
 
   }
 
-  setUppercaseName(event ) {
+  setUppercaseName(event) {
     debugger;
     console.log(event)
+  }
+  onSubmit() {
+    this.submitted = true;
+    console.log('Form submitted !!')
   }
 
 }
