@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MustMatch } from './_helpers/must-match.validator';
 
 @Component({
   selector: 'app-formExamples',
@@ -8,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AppformExamples implements OnInit {
   registerForm: FormGroup;
-  submitted:boolean = false;
+  submitted: boolean = false;
 
 
   userName: string = "";
@@ -56,11 +57,14 @@ export class AppformExamples implements OnInit {
     this.registerForm = this.formBuilder.group(
       {
         firstName: ['', Validators.required],
-        lastName: ['',Validators.required],
-        email:['', [Validators.required, Validators.email]],
+        lastName: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required, Validators.minLength(6)]],
+        confirmPassword: ['', Validators.required],
 
-      }
+      }, {
+      validator: MustMatch('password', 'confirmPassword')
+    }
     )
 
 
