@@ -15,6 +15,8 @@ import { ApplifeCycleHooks2 } from './components/lifeCycleHooks/lifeCycleHooks2/
 import { ExponentialPowerPipe } from './exponential-power.pipe';
 import { AppdirectiveExamples } from './components/directiveExamples/directiveExamples.component';
 import { AppformExamples } from './components/formExamples/formExamples.component';
+import { Appchild } from './components/componentComunication/parent-child/child/child.component';
+import { Appparent } from './components/componentComunication/parent-child/parent/parent.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { AppformExamples } from './components/formExamples/formExamples.componen
     ApplifeCycleHooks2,
     ExponentialPowerPipe,
     AppdirectiveExamples,
-    AppformExamples
+    AppformExamples,
+    Appchild,
+    Appparent
   ],
   imports: [ // Registering Lib class
     BrowserModule,

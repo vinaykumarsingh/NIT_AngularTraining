@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
+import { Appparent } from './components/componentComunication/parent-child/parent/parent.component';
 import { AppdirectiveExamples } from './components/directiveExamples/directiveExamples.component';
 import { AppformExamples } from './components/formExamples/formExamples.component';
 import { ApplifeCycleHooks1 } from './components/lifeCycleHooks/lifeCycleHooks1/lifeCycleHooks1.component';
@@ -15,7 +16,7 @@ const routes: Routes = [
     { path: 'lifeCycleHooks', component: ApplifeCycleHooks1 },
     { path: 'appdirectiveExamples', component: AppdirectiveExamples },
     { path: 'AppformExamples', component: AppformExamples },
-
+    { path: 'parentChildComunnication', component: Appparent },
 
 
 ]; // sets up routes constant where you define your routes
