@@ -1,3 +1,6 @@
 <p>parent componnet works!</p>
 
-<app-child [userNameInChild]="userNameInParent" [notifications]="notifications"></app-child>
+<button (click)="changeValueInParent()">Modify Variable in parent componnet</button>
+
+
+<app-child (newItemEvent)="addItem($event)" [userNameInChild]="userNameInParent" [notifications]="notifications111"></app-child>

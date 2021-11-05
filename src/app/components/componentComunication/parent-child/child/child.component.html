@@ -7,3 +7,7 @@
 </div>
 
 <p>Data coming from parent is --> {{userNameInChild}}</p>
+
+<p>Output example for child to parent</p>
+<input type="text" id="item-input" #newItem>
+<button (click)="addNewItem(newItem.value)">Add to parent's list</button>
