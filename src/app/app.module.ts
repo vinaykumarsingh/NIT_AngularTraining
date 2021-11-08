@@ -17,6 +17,9 @@ import { AppdirectiveExamples } from './components/directiveExamples/directiveEx
 import { AppformExamples } from './components/formExamples/formExamples.component';
 import { Appchild } from './components/componentComunication/parent-child/child/child.component';
 import { Appparent } from './components/componentComunication/parent-child/parent/parent.component';
+import { AppsharedServiceComponnetContainer } from './components/componentComunication/siblings/shared-service-componnet-container/sharedServiceComponentContainer.component';
+import { AppsharedServiceComponent1 } from './components/componentComunication/siblings/shared-service-componnet1/sharedServiceComponent1.component';
+import { AppsharedServiceComponent2 } from './components/componentComunication/siblings/shared-service-componnet2/sharedServiceComponent2.component';
 
 
 @NgModule({
@@ -30,7 +33,10 @@ import { Appparent } from './components/componentComunication/parent-child/paren
     AppdirectiveExamples,
     AppformExamples,
     Appchild,
-    Appparent
+    Appparent,
+    AppsharedServiceComponnetContainer,
+    AppsharedServiceComponent1,
+    AppsharedServiceComponent2
   ],
   imports: [ // Registering Lib class
     BrowserModule,
