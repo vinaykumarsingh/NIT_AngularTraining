@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app.routing.module'
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -20,6 +20,7 @@ import { Appparent } from './components/componentComunication/parent-child/paren
 import { AppsharedServiceComponnetContainer } from './components/componentComunication/siblings/shared-service-componnet-container/sharedServiceComponentContainer.component';
 import { AppsharedServiceComponent1 } from './components/componentComunication/siblings/shared-service-componnet1/sharedServiceComponent1.component';
 import { AppsharedServiceComponent2 } from './components/componentComunication/siblings/shared-service-componnet2/sharedServiceComponent2.component';
+import { ApphttpCallsDemo } from './components/httpCalls/httpCallsDemo.component';
 
 
 @NgModule({
@@ -36,14 +37,16 @@ import { AppsharedServiceComponent2 } from './components/componentComunication/s
     Appparent,
     AppsharedServiceComponnetContainer,
     AppsharedServiceComponent1,
-    AppsharedServiceComponent2
+    AppsharedServiceComponent2,
+    ApphttpCallsDemo
   ],
   imports: [ // Registering Lib class
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [], // Register Services
   bootstrap: [AppComponent] // Bootstraping ofcomponnet

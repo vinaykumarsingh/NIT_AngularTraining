@@ -4,6 +4,7 @@ import { Appparent } from './components/componentComunication/parent-child/paren
 import { AppsharedServiceComponnetContainer } from './components/componentComunication/siblings/shared-service-componnet-container/sharedServiceComponentContainer.component';
 import { AppdirectiveExamples } from './components/directiveExamples/directiveExamples.component';
 import { AppformExamples } from './components/formExamples/formExamples.component';
+import { ApphttpCallsDemo } from './components/httpCalls/httpCallsDemo.component';
 import { ApplifeCycleHooks1 } from './components/lifeCycleHooks/lifeCycleHooks1/lifeCycleHooks1.component';
 
 
@@ -19,6 +20,8 @@ const routes: Routes = [
     { path: 'AppformExamples', component: AppformExamples },
     { path: 'parentChildComunnication', component: Appparent },
     { path: 'siblingsComunnication', component: AppsharedServiceComponnetContainer },
+    { path: 'httpCallDemo', component: ApphttpCallsDemo },
+
 
 
 
