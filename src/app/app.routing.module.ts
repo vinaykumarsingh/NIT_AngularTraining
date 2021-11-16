@@ -21,6 +21,7 @@ const routes: Routes = [
     { path: 'parentChildComunnication', component: Appparent },
     { path: 'siblingsComunnication', component: AppsharedServiceComponnetContainer },
     { path: 'httpCallDemo', component: ApphttpCallsDemo },
+    { path: 'lazy1', loadChildren: () => import('./lazy1/lazy1Componnet1.module').then(m => m.Lazy1Module)}
 
 
 

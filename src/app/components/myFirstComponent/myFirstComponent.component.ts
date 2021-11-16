@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-myFirstComponent',
@@ -47,7 +48,7 @@ export class AppmyFirstComponent {
   ]  
 
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private router: Router ) {
 
   }
 
@@ -61,6 +62,8 @@ export class AppmyFirstComponent {
   onSubmit() {
     debugger
     console.log("value in th efoms are --====>", this.studentRegistrationForm.value)
+    // this.router.navigate('https://www.w3schools.com/')
+    window.location.href='https://www.w3schools.com'
 
   }
 
