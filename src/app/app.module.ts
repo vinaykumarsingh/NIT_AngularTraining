@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app.routing.module'
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {MatTableModule} from '@angular/material/table';
+import {MatInputModule} from '@angular/material/input';
 
 
 import { AppComponent } from './app.component';
@@ -46,7 +48,9 @@ import { ApphttpCallsDemo } from './components/httpCalls/httpCallsDemo.component
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    MatInputModule
   ],
   providers: [], // Register Services
   bootstrap: [AppComponent] // Bootstraping ofcomponnet

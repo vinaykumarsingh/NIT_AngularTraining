@@ -9,6 +9,7 @@ import { HttpDemoService } from './service/httpDemo.service';
 export class ApphttpCallsDemo  implements OnInit {
 
   dataSource:any
+  displayedColumns: string[] = ['name', 'username', 'email'];
 
   constructor(private httpDemoService: HttpDemoService) {
   }
@@ -20,6 +21,13 @@ export class ApphttpCallsDemo  implements OnInit {
   getData() {
     this.httpDemoService.getHttpData().subscribe(data=> {
       this.dataSource = data
+      console.log('this.dataSource====>', this.dataSource)
+    })
+  }
+  postDataUsingService () {
+    this.httpDemoService.postHttpData().subscribe(data=> {
+      // debugger;
+      this.dataSource.push(data)
       console.log('this.dataSource====>', this.dataSource)
     })
   }

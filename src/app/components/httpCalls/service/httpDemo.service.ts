@@ -24,5 +24,15 @@ export class HttpDemoService {
         return this.httpClient.get(this.apiEndPoints)
     }
 
+    postHttpData(): Observable<any>  {
+        let tempObj = {
+            "id": 11,
+            "name": "Test Name",
+            "username": "Test username",
+          }
+
+        return this.httpClient.post(this.apiEndPoints, tempObj)
+    }
+
 
 }
