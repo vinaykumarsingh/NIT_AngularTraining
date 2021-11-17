@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
+import { Appchild } from '../child/child.component';
 
 @Component({
   selector: 'app-parent',
@@ -6,7 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class Appparent {
-  userNameInParent = "vinay"
+  userNameInParent:string = "vinay"
+
+
+  @ViewChild('txtname') mytxt: ElementRef
+  @ViewChild(Appchild) childComponentFunctionRef : Appchild
+
+
+  ngAfterViewInit() {
+    // invokle functionCalledFromParent
+    console.log('message in parent componnet is ------>', this.childComponentFunctionRef.functionCalledFromParent())
+
+  }
+
+
+
+
+
+
 
   notifications111 = [
     { id: 1, message: 'This is the first notification' },
@@ -29,6 +47,10 @@ export class Appparent {
   changeValueInParent(){
     console.log('changeValueInParent is clicked');
     this.userNameInParent = "vinay singh"
+  }
+
+  MyFunc() {
+    console.log("I'mclickedin template file", this.mytxt.nativeElement.value)
   }
 
 }

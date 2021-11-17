@@ -1,6 +1,8 @@
 <p>parent componnet works!</p>
+<input #txtname type="text">
+<button (click)="MyFunc()" >Click Me</button>  
 
 <button (click)="changeValueInParent()">Modify Variable in parent componnet</button>
 
 
-<app-child (newItemEvent)="addItem($event)" [userNameInChild]="userNameInParent" [notifications]="notifications111"></app-child>
+<app-child  (newItemEvent)="addItem($event)" [userNameInChild]="userNameInParent" [notifications]="notifications111"></app-child>

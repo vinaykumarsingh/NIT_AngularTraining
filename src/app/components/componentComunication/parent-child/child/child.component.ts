@@ -37,4 +37,10 @@ export class Appchild implements OnInit {
     this.newItemEvent.emit(valueInChild);
   }
 
+  functionCalledFromParent() {
+    debugger
+    console.log("'I'm getting called from parent using viewchild")
+    return "'I'm getting called from parent using viewchild"
+  }
+
 }

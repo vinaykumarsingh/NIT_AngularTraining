@@ -22,6 +22,8 @@ export class ApphttpCallsDemo  implements OnInit {
     this.httpDemoService.getHttpData().subscribe(data=> {
       this.dataSource = data
       console.log('this.dataSource====>', this.dataSource)
+    }, (error)=> {
+      console.log('Error handled in Component', error)
     })
   }
   postDataUsingService () {
