@@ -3,7 +3,9 @@
 
 <p>Parent Child Communication</p>
 <div class="notifications" *ngFor="let n of notifications">
-    {{ n.message }}
+    <span #allSpan>
+        {{ n.message }}
+    </span>
 </div>
 
 <p>Data coming from parent is --> {{userNameInChild}}</p>

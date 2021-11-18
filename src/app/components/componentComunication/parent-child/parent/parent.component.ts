@@ -29,6 +29,8 @@ export class Appparent {
   notifications111 = [
     { id: 1, message: 'This is the first notification' },
     { id: 2, message: 'This is the second notification' },
+    { id: 3, message: 'This is the Third notification' },
+
   ];
 
   constructor() {

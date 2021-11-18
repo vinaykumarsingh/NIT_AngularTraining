@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges, ViewChild, ViewChildren } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Output, EventEmitter } from '@angular/core';
 
@@ -13,6 +13,7 @@ export class Appchild implements OnInit {
   @Input() notifications: any[]
   @Output() newItemEvent = new EventEmitter<string>();
 
+  @ViewChildren('allSpan') allSpan
 
   constructor() {
     console.log('inside constructure')
@@ -41,6 +42,14 @@ export class Appchild implements OnInit {
     debugger
     console.log("'I'm getting called from parent using viewchild")
     return "'I'm getting called from parent using viewchild"
+  }
+
+  ngAfterViewInit() {
+    console.log('allSpan is ===>', this.allSpan)
+    this.allSpan._results.forEach((element, index) => {
+      console.log(element, index)
+      this.allSpan._results[index].nativeElement.innerText = 'Appended using View children' + " " + this.allSpan._results[index].nativeElement.innerText 
+    });
   }
 
 }
