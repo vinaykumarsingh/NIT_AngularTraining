@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -7,9 +7,9 @@ import { Router } from '@angular/router';
   templateUrl: './myFirstComponent.component.html',
   styleUrls: ['./myFirstComponent.component.css']
 })
-export class AppmyFirstComponent {
+export class AppmyFirstComponent implements  OnInit {
   title = 'my-app'
-  userName = 'vinay singh'
+  userName = ''
   myWealth = 1000;
   baseNumber = 2
   isStatusValid1: boolean = true
@@ -18,7 +18,7 @@ export class AppmyFirstComponent {
     {
       "userId": 1,
       "id": 1,
-      "title": "sunt aut facere derit",
+      "title": "Title changed ",
       "body": "quia et suscipit\nsuscipit recusandae consequuntur "
     },
     {
@@ -62,9 +62,15 @@ export class AppmyFirstComponent {
   onSubmit() {
     debugger
     console.log("value in th efoms are --====>", this.studentRegistrationForm.value)
-    // this.router.navigate('https://www.w3schools.com/')
-    window.location.href='https://www.w3schools.com'
+    // window.location.href='https://www.w3schools.com'
+    localStorage.setItem("lastname", "Smith");
+    localStorage.setItem("currentUser", this.studentRegistrationForm.controls.firstName.value);
 
+  }
+
+  ngOnInit() {
+    debugger
+    this.userName = "Vinay Singh";
   }
 
 }

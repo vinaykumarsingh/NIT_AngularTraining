@@ -10,11 +10,12 @@ import { ApplifeCycleHooks1 } from './components/lifeCycleHooks/lifeCycleHooks1/
 
 import { AppmyFirstComponent } from './components/myFirstComponent/myFirstComponent.component';
 import { AppmySecondComponent } from './components/mySecondComponent/mySecondComponent.component';
+import { AuthGuard } from './routeGuard/auth-guard.service';
 
 const routes: Routes = [
     { path: '', component: AppmyFirstComponent },
     { path: 'first-component', component: AppmyFirstComponent },
-    { path: 'second-component', component: AppmySecondComponent },
+    { path: 'second-component', component: AppmySecondComponent, canActivate: [AuthGuard] },
     { path: 'lifeCycleHooks', component: ApplifeCycleHooks1 },
     { path: 'appdirectiveExamples', component: AppdirectiveExamples },
     { path: 'AppformExamples', component: AppformExamples },
