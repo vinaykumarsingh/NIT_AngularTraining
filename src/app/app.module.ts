@@ -23,6 +23,7 @@ import { AppsharedServiceComponnetContainer } from './components/componentComuni
 import { AppsharedServiceComponent1 } from './components/componentComunication/siblings/shared-service-componnet1/sharedServiceComponent1.component';
 import { AppsharedServiceComponent2 } from './components/componentComunication/siblings/shared-service-componnet2/sharedServiceComponent2.component';
 import { ApphttpCallsDemo } from './components/httpCalls/httpCallsDemo.component';
+import { ApptemplateForm } from './components/templateDrivenForm/templateForm.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { ApphttpCallsDemo } from './components/httpCalls/httpCallsDemo.component
     AppsharedServiceComponnetContainer,
     AppsharedServiceComponent1,
     AppsharedServiceComponent2,
-    ApphttpCallsDemo
+    ApphttpCallsDemo,
+    ApptemplateForm
   ],
   imports: [ // Registering Lib class
     BrowserModule,

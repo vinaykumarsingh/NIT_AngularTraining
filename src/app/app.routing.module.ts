@@ -10,6 +10,7 @@ import { ApplifeCycleHooks1 } from './components/lifeCycleHooks/lifeCycleHooks1/
 
 import { AppmyFirstComponent } from './components/myFirstComponent/myFirstComponent.component';
 import { AppmySecondComponent } from './components/mySecondComponent/mySecondComponent.component';
+import { ApptemplateForm } from './components/templateDrivenForm/templateForm.component';
 import { AuthGuard } from './routeGuard/auth-guard.service';
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
     { path: 'parentChildComunnication', component: Appparent },
     { path: 'siblingsComunnication', component: AppsharedServiceComponnetContainer },
     { path: 'httpCallDemo', component: ApphttpCallsDemo },
+    { path: 'templlateDrivenForm', component: ApptemplateForm },
+
+    
+
     { path: 'lazy1', loadChildren: () => import('./lazy1/lazy1Componnet1.module').then(m => m.Lazy1Module)}
 
 
