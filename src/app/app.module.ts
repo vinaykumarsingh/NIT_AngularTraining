@@ -24,6 +24,10 @@ import { AppsharedServiceComponent1 } from './components/componentComunication/s
 import { AppsharedServiceComponent2 } from './components/componentComunication/siblings/shared-service-componnet2/sharedServiceComponent2.component';
 import { ApphttpCallsDemo } from './components/httpCalls/httpCallsDemo.component';
 import { ApptemplateForm } from './components/templateDrivenForm/templateForm.component';
+import { AppCustomDirective } from './components/customDirective/customDirective.component';
+import { ChangeTextDirective } from './components/customDirective/directives/change-text.directive';
+import { AppShadowDirective } from './components/customDirective/directives/app-shadow.directive';
+import { CustomThemeDirective } from './components/customDirective/directives/custom-theme.directive';
 
 
 @NgModule({
@@ -42,7 +46,11 @@ import { ApptemplateForm } from './components/templateDrivenForm/templateForm.co
     AppsharedServiceComponent1,
     AppsharedServiceComponent2,
     ApphttpCallsDemo,
-    ApptemplateForm
+    ApptemplateForm,
+    AppCustomDirective,
+    ChangeTextDirective,
+    AppShadowDirective,
+    CustomThemeDirective
   ],
   imports: [ // Registering Lib class
     BrowserModule,

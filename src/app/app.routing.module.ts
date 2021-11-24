@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 import { Appparent } from './components/componentComunication/parent-child/parent/parent.component';
 import { AppsharedServiceComponnetContainer } from './components/componentComunication/siblings/shared-service-componnet-container/sharedServiceComponentContainer.component';
+import { AppCustomDirective } from './components/customDirective/customDirective.component';
 import { AppdirectiveExamples } from './components/directiveExamples/directiveExamples.component';
 import { AppformExamples } from './components/formExamples/formExamples.component';
 import { ApphttpCallsDemo } from './components/httpCalls/httpCallsDemo.component';
@@ -24,7 +25,9 @@ const routes: Routes = [
     { path: 'siblingsComunnication', component: AppsharedServiceComponnetContainer },
     { path: 'httpCallDemo', component: ApphttpCallsDemo },
     { path: 'templlateDrivenForm', component: ApptemplateForm },
+    { path: 'customDirective', component: AppCustomDirective },
 
+    
     
 
     { path: 'lazy1', loadChildren: () => import('./lazy1/lazy1Componnet1.module').then(m => m.Lazy1Module)}

@@ -1,5 +1,3 @@
-<p>Template form componnet works @!</p>
-
 <div class="jumbotron">
     <div class="container">
         <div class="row">
@@ -8,14 +6,12 @@
 
 
 
-                <form #f="ngForm" name="form" (ngSubmit)=" onSubmit(f)">
-
+                <form name="form" (ngSubmit)="f.form.valid && onSubmit(f)" #f="ngForm">
 
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="text" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel"
-                        required email />
-                        <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                        <input type="text" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" required email />
+                        <div class="invalid-feedback">
                             <div *ngIf="email.errors.required">Email is required</div>
                             <div *ngIf="email.errors.email">Email must be a valid email address</div>
                         </div>
