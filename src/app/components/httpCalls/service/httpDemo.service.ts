@@ -4,7 +4,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs/internal/observable/throwError';
-
+import { environment } from '../../../../environments/environment'
 
 
 @Injectable({
@@ -15,9 +15,9 @@ export class HttpDemoService {
     // private usernameSource = new BehaviorSubject<string>('Vinay Singh');
     // username = this.usernameSource.asObservable()
 
-    apiEndPoints = 'https://jsonplaceholder.typicode.com/userss'
+    // apiEndPoints = 'https://jsonplaceholder.typicode.com/users'
 
-
+    apiEndPoints = environment.userListUrl
     constructor(private httpClient: HttpClient) { }
 
 

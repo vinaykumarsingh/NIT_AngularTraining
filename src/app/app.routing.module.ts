@@ -11,6 +11,8 @@ import { ApplifeCycleHooks1 } from './components/lifeCycleHooks/lifeCycleHooks1/
 
 import { AppmyFirstComponent } from './components/myFirstComponent/myFirstComponent.component';
 import { AppmySecondComponent } from './components/mySecondComponent/mySecondComponent.component';
+import { AppprodDetail } from './components/routeParam/product detail/prodDetail.component';
+import { ApprouteParam } from './components/routeParam/routeParam.component';
 import { ApptemplateForm } from './components/templateDrivenForm/templateForm.component';
 import { AuthGuard } from './routeGuard/auth-guard.service';
 
@@ -26,7 +28,10 @@ const routes: Routes = [
     { path: 'httpCallDemo', component: ApphttpCallsDemo },
     { path: 'templlateDrivenForm', component: ApptemplateForm },
     { path: 'customDirective', component: AppCustomDirective },
+    { path: 'routeParam', component: ApprouteParam },
+    { path: 'products/:productId', component: AppprodDetail },
 
+    
     
     
 

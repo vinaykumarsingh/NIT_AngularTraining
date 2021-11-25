@@ -19,6 +19,7 @@
 .navBar a {
   color: #fff;
   text-decoration: none;
+  padding: 0px 5px;
 }
 .navBar a.active {
   color: red;

@@ -28,6 +28,8 @@ import { AppCustomDirective } from './components/customDirective/customDirective
 import { ChangeTextDirective } from './components/customDirective/directives/change-text.directive';
 import { AppShadowDirective } from './components/customDirective/directives/app-shadow.directive';
 import { CustomThemeDirective } from './components/customDirective/directives/custom-theme.directive';
+import { ApprouteParam } from './components/routeParam/routeParam.component';
+import { AppprodDetail } from './components/routeParam/product detail/prodDetail.component';
 
 
 @NgModule({
@@ -50,7 +52,9 @@ import { CustomThemeDirective } from './components/customDirective/directives/cu
     AppCustomDirective,
     ChangeTextDirective,
     AppShadowDirective,
-    CustomThemeDirective
+    CustomThemeDirective,
+    ApprouteParam,
+    AppprodDetail
   ],
   imports: [ // Registering Lib class
     BrowserModule,
