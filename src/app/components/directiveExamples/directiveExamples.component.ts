@@ -42,6 +42,25 @@ export class AppdirectiveExamples implements OnInit {
     }
   ]
 
+  positions:Array<Object> = [
+    {
+      id: 101,
+      name: 'Test 101'
+    },
+    {
+      id: 102,
+      name: 'Test 102'
+    },
+    {
+      id: 103,
+      name: 'Test 103'
+    },
+    {
+      id: 104,
+      name: 'Test 104'
+    }
+  ]
+
   constructor() {
     console.log("I'm loaded in constructor");
   }

@@ -6,6 +6,7 @@ import { AppCustomDirective } from './components/customDirective/customDirective
 import { AppdirectiveExamples } from './components/directiveExamples/directiveExamples.component';
 import { AppformExamples } from './components/formExamples/formExamples.component';
 import { ApphttpCallsDemo } from './components/httpCalls/httpCallsDemo.component';
+import { AppCompB } from './components/inheritance/componentB/AppCompB.componnet';
 import { ApplifeCycleHooks1 } from './components/lifeCycleHooks/lifeCycleHooks1/lifeCycleHooks1.component';
 
 
@@ -29,6 +30,8 @@ const routes: Routes = [
     { path: 'templlateDrivenForm', component: ApptemplateForm },
     { path: 'customDirective', component: AppCustomDirective },
     { path: 'routeParam', component: ApprouteParam },
+    { path: 'inheritance', component: AppCompB },
+
     { path: 'products/:productId', component: AppprodDetail },
 
     

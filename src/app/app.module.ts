@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app.routing.module'
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 
@@ -30,6 +30,9 @@ import { AppShadowDirective } from './components/customDirective/directives/app-
 import { CustomThemeDirective } from './components/customDirective/directives/custom-theme.directive';
 import { ApprouteParam } from './components/routeParam/routeParam.component';
 import { AppprodDetail } from './components/routeParam/product detail/prodDetail.component';
+import { MyHttpInterceptor } from './components/interceptor/http.interceptor';
+import { AppCompA } from './components/inheritance/componentA/AppCompA.componnet';
+import { AppCompB } from './components/inheritance/componentB/AppCompB.componnet';
 
 
 @NgModule({
@@ -54,7 +57,9 @@ import { AppprodDetail } from './components/routeParam/product detail/prodDetail
     AppShadowDirective,
     CustomThemeDirective,
     ApprouteParam,
-    AppprodDetail
+    AppprodDetail,
+    AppCompB,
+    AppCompA
   ],
   imports: [ // Registering Lib class
     BrowserModule,
@@ -66,7 +71,9 @@ import { AppprodDetail } from './components/routeParam/product detail/prodDetail
     MatTableModule,
     MatInputModule
   ],
-  providers: [], // Register Services
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: MyHttpInterceptor, multi: true }
+  ], // Register Services
   bootstrap: [AppComponent] // Bootstraping ofcomponnet
 })
 export class AppModule { }

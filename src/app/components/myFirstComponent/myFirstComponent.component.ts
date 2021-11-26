@@ -45,7 +45,8 @@ export class AppmyFirstComponent implements  OnInit {
       "title": "nesciunt quas odio",
       "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
     }
-  ]  
+  ] 
+  eventData:''
 
 
   constructor(private formBuilder: FormBuilder, private router: Router ) {
@@ -69,8 +70,26 @@ export class AppmyFirstComponent implements  OnInit {
   }
 
   ngOnInit() {
-    debugger
     this.userName = "Vinay Singh";
   }
 
+
+  keyUp(event) {
+    console.log('Hi')
+    this.eventData = event.target.value
+  }
+  myFocusMethod () {
+    console.log("I'm on focus")
+  }
+
+  myBlurMethod() {
+    console.log("I'm on Blur")
+
+  }
+
+  myOnChangeMethod(event) {
+    debugger
+    console.log("I'm on on change")
+
+  }
 }
