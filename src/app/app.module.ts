@@ -33,6 +33,15 @@ import { AppprodDetail } from './components/routeParam/product detail/prodDetail
 import { MyHttpInterceptor } from './components/interceptor/http.interceptor';
 import { AppCompA } from './components/inheritance/componentA/AppCompA.componnet';
 import { AppCompB } from './components/inheritance/componentB/AppCompB.componnet';
+import { AppRxjsOperators } from './components/RxjsOperators/RxjsOperators.component';
+import { ApprxjsConsumer } from './components/RxjsOperators/rxjsConsumer/rxjsConsumer.component';
+import { AppdynamicComponent } from './components/dynamic-component/dynamicComponent.component';
+import { AdDirective } from './components/dynamic-component/directive/ad.directive';
+import { HeroJobAdComponent } from './components/dynamic-component/component/hero-job-ad.component';
+import { HeroProfileComponent } from './components/dynamic-component/component/hero-profile.component';
+import { AdBannerComponent } from './components/dynamic-component/component/ad-banner.component';
+import { AdService } from './components/dynamic-component/service/ad.service';
+import { RainbowDirective } from './components/customDirective/directives/rainbow.directive';
 
 
 @NgModule({
@@ -56,10 +65,18 @@ import { AppCompB } from './components/inheritance/componentB/AppCompB.componnet
     ChangeTextDirective,
     AppShadowDirective,
     CustomThemeDirective,
+    RainbowDirective,
     ApprouteParam,
     AppprodDetail,
     AppCompB,
-    AppCompA
+    AppCompA,
+    AppRxjsOperators,
+    ApprxjsConsumer,
+    AppdynamicComponent,
+    AdDirective,
+    HeroProfileComponent,
+    HeroJobAdComponent,
+    AdBannerComponent
   ],
   imports: [ // Registering Lib class
     BrowserModule,
@@ -72,7 +89,8 @@ import { AppCompB } from './components/inheritance/componentB/AppCompB.componnet
     MatInputModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: MyHttpInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: MyHttpInterceptor, multi: true },
+    AdService
   ], // Register Services
   bootstrap: [AppComponent] // Bootstraping ofcomponnet
 })

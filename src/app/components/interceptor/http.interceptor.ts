@@ -18,7 +18,7 @@ export class MyHttpInterceptor implements HttpInterceptor {
     
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     // add custom header
-    debugger;
+    // debugger;
     const customReq = request.clone({
       headers: request.headers.set('app-author', 'Vinay Singh')
     });

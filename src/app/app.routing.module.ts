@@ -4,6 +4,7 @@ import { Appparent } from './components/componentComunication/parent-child/paren
 import { AppsharedServiceComponnetContainer } from './components/componentComunication/siblings/shared-service-componnet-container/sharedServiceComponentContainer.component';
 import { AppCustomDirective } from './components/customDirective/customDirective.component';
 import { AppdirectiveExamples } from './components/directiveExamples/directiveExamples.component';
+import { AppdynamicComponent } from './components/dynamic-component/dynamicComponent.component';
 import { AppformExamples } from './components/formExamples/formExamples.component';
 import { ApphttpCallsDemo } from './components/httpCalls/httpCallsDemo.component';
 import { AppCompB } from './components/inheritance/componentB/AppCompB.componnet';
@@ -14,6 +15,7 @@ import { AppmyFirstComponent } from './components/myFirstComponent/myFirstCompon
 import { AppmySecondComponent } from './components/mySecondComponent/mySecondComponent.component';
 import { AppprodDetail } from './components/routeParam/product detail/prodDetail.component';
 import { ApprouteParam } from './components/routeParam/routeParam.component';
+import { AppRxjsOperators } from './components/RxjsOperators/RxjsOperators.component';
 import { ApptemplateForm } from './components/templateDrivenForm/templateForm.component';
 import { AuthGuard } from './routeGuard/auth-guard.service';
 
@@ -31,7 +33,10 @@ const routes: Routes = [
     { path: 'customDirective', component: AppCustomDirective },
     { path: 'routeParam', component: ApprouteParam },
     { path: 'inheritance', component: AppCompB },
+    { path: 'RxjsOperators', component: AppRxjsOperators },
+    { path: 'dynamicComponent', component: AppdynamicComponent },
 
+    
     { path: 'products/:productId', component: AppprodDetail },
 
     

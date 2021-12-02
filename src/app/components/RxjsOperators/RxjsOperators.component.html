@@ -1,0 +1,15 @@
+<p>RxjsOperators works !</p>
+
+<!-- <span class="" *ngFor="let n of dataFromService">
+    <span #messageRef>{{ n.name }}</span> 
+</span> -->
+<div class="userInfo">
+    <ul>
+        <li *ngFor="let n of dataFromService">
+            <span #messageRef>{{ n.name }}</span>
+        </li>
+    </ul>
+</div>
+
+<p>Child componnet===========================================></p>
+<app-rxjsConsumer></app-rxjsConsumer>
