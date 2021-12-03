@@ -17,6 +17,7 @@ import { AppprodDetail } from './components/routeParam/product detail/prodDetail
 import { ApprouteParam } from './components/routeParam/routeParam.component';
 import { AppRxjsOperators } from './components/RxjsOperators/RxjsOperators.component';
 import { ApptemplateForm } from './components/templateDrivenForm/templateForm.component';
+import { LightswitchComponent } from './components/unitTesting/lightswitch.componnet';
 import { AuthGuard } from './routeGuard/auth-guard.service';
 
 const routes: Routes = [
@@ -35,7 +36,9 @@ const routes: Routes = [
     { path: 'inheritance', component: AppCompB },
     { path: 'RxjsOperators', component: AppRxjsOperators },
     { path: 'dynamicComponent', component: AppdynamicComponent },
+    { path: 'unitTesting', component: LightswitchComponent },
 
+    
     
     { path: 'products/:productId', component: AppprodDetail },
 

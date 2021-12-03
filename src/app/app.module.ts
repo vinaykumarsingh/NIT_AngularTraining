@@ -42,6 +42,7 @@ import { HeroProfileComponent } from './components/dynamic-component/component/h
 import { AdBannerComponent } from './components/dynamic-component/component/ad-banner.component';
 import { AdService } from './components/dynamic-component/service/ad.service';
 import { RainbowDirective } from './components/customDirective/directives/rainbow.directive';
+import { LightswitchComponent } from './components/unitTesting/lightswitch.componnet';
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { RainbowDirective } from './components/customDirective/directives/rainbo
     AdDirective,
     HeroProfileComponent,
     HeroJobAdComponent,
-    AdBannerComponent
+    AdBannerComponent,
+    LightswitchComponent
   ],
   imports: [ // Registering Lib class
     BrowserModule,
